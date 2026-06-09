@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://boox8xt0vjmk3"]
+
+[ext_resource type="Script" uid="uid://odl5qkh8ui7u" path="res://script/main_menu.gd" id="1_3er1b"]
+[ext_resource type="FontFile" uid="uid://cexrlgc2hv0bv" path="res://m5x7.ttf" id="2_hxu56"]
+
+[node name="MainMenu" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_3er1b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_left = -1.6320001
+anchor_top = -6.8
+anchor_right = -1.6320001
+anchor_bottom = -6.8
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.5529412, 0.08627451, 0.101960786, 1)
+
+[node name="Start" type="Button" parent="."]
+offset_left = 296.0
+offset_top = 280.0
+offset_right = 344.0
+offset_bottom = 301.0
+theme_override_fonts/font = ExtResource("2_hxu56")
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+process_mode = 3
+offset_left = 280.0
+offset_top = 312.0
+offset_right = 360.0
+offset_bottom = 333.0
+theme_override_fonts/font = ExtResource("2_hxu56")
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 184.0
+offset_top = 88.0
+offset_right = 274.66666
+offset_bottom = 101.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("2_hxu56")
+text = "HUU HAN OFFLINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
